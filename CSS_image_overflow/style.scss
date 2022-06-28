@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap');
+
+$font1: 'Heebo', sans-serif;
+$font2: 'Lobster Two', cursive;
+$white:#fff;
+$black:#000;
+$primary-light: #f9fafb;
+$second-light:#f0f0f0;
+$third-light:#DADBDB;
+
+$primary-grey:#777;
+$second-grey:#4f4f4f;
+
+$first-shadow: rgba(0,0,0,0.3);
+
+$success: rgba(61, 168, 102, 0.6);
+$error: rgba(168, 30, 14, 0.6);
+
+$primary-color:#4c8061;
+
+/* GLOBAL CONFIG RESET */
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+select:focus, input:focus, button:focus{
+  outline:none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+font-family: 'Heebo', sans-serif;
+background-color: var(--primary-light);
+overflow-x: hidden;
+
+display: grid;
+grid-template-columns: 1fr 1fr;      
+// justify-content: center;
+// align-items: center;
+
+min-height: 100vh;
+margin: 30px 0 30px;
+}
+
+h1{
+  display: block;
+  font-size: 1.5rem;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+/* -------- CLASS --------- */
+
+.containerCard{
+  // display: flex;
+  // flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+.wrapper {
+  display: inline-block;
+  height: 30vh;
+  width: 40vw;
+  // padding: 5px;
+  margin: 5px;
+  background: lightgray;
+  border: 1px solid black;
+
+  img{
+    height: 100%;
+    width: 100%;
+  }
+
+  .noObjectFit{
+    height: 100%;
+    width: 50%;
+  }
+
+  &.contain img{
+    object-fit: contain;
+  }
+
+  &.cover img{
+    object-fit: cover;
+  }
+
+  &.fill img{
+    object-fit: fill;
+  }
+
+  &.scaleDown img{
+    object-fit: scale-down;
+  }
+  
+  &.none img{
+    object-fit: none;
+  }
+}
+
+.overflow{
+  display: inline-block;
+  height: 60vh;
+  width: 40vw;
+  margin: 5px;
+  background: lightgray;
+  border: 1px solid black;
+
+  &.overflowY{
+    overflow-y: hidden;
+  }
+
+    img{
+      max-width: 70%;
+  }
+
+}
+
+
+/* -------- PSEUDO CLASS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+  
+}

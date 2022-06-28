@@ -1,0 +1,93 @@
+   <div class="container-img">
+      <p>Img Tag - 1 Image (Buggy)</p>
+      <img
+        class="grayscale"
+        src="https://images.unsplash.com/photo-1591160690555-5debfba289f0?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928"
+      />
+    </div>
+    <div class="container-img">
+      <p>Inline SVG - 2 Images</p>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        id="svgroot"
+        viewBox="0 0 400 377"
+        width="400"
+        class="svg-first"
+      >
+        <defs>
+          <filter id="filtersPicture">
+            <feComposite
+              result="inputTo_38"
+              in="SourceGraphic"
+              in2="SourceGraphic"
+              operator="arithmetic"
+              k1="0"
+              k2="1"
+              k3="0"
+              k4="0"
+            />
+            <feColorMatrix
+              id="filter_38"
+              type="saturate"
+              values="0"
+              data-filterid="38"
+            />
+          </filter>
+        </defs>
+        <image
+          filter='url("#filtersPicture")'
+          x="0"
+          y="0"
+          width="400"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xlink:href="https://images.unsplash.com/photo-1591160690555-5debfba289f0?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928"
+        />
+      </svg>
+    </div>
+
+    <div class="container-img">
+      <p>Grayscale and colored images-link individual - 2 Images</p>
+      <a id="google" href="#"></a>
+    </div>
+
+    <div class="container-img">
+      <p>SVG Image Hover - 1 Image</p>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="svg-last"
+        viewBox="0 0 400 377"
+        width="400"
+      >
+        <filter id="grayscale">
+          <feColorMatrix
+            type="matrix"
+            values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0"
+          />
+        </filter>
+      </svg>
+    </div>
+
+    <div class="container-img">
+      <p>Overlay Image Tag Hover Dark - 1 Image</p>
+      <div class="col-md-6 col-sm-12">
+        <span class="overlay">
+          <img
+            src="https://images.unsplash.com/photo-1591160690555-5debfba289f0?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928"
+            class="img-responsive"
+            alt="about img 2"
+          />
+        </span>
+      </div>
+    </div>
+
+    <div class="container-img">
+      <p>Overlay Image Tag Hover Light - 1 Image Responsive</p>
+      <div class="container-2">
+        <img
+          src="https://images.unsplash.com/photo-1591160690555-5debfba289f0?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928"
+          alt="about img 2"
+          class="img"
+        />
+        <div class="overlay-2"></div>
+      </div>
+    </div>

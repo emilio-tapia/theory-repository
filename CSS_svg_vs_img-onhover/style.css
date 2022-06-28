@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+:root{
+  --white:#fff;
+  --black:#000;
+  --primary-light: #f9fafb;
+  --second-light:#f0f0f0;
+  --third-light:#DADBDB;
+
+  --primary-grey:#777;
+  --second-grey:#4f4f4f;
+  
+  --first-shadow: rgba(0,0,0,0.3);
+
+  --success: rgba(61, 168, 102, 0.6);
+  --error: rgba(168, 30, 14, 0.6);
+
+  --primary-color:#4c8061;
+}
+
+/* GLOBAL CONFIG RESET */
+* {
+box-sizing: border-box;
+font-size: 1rem;
+margin: 0;
+padding: 0;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+font-family: 'Open-Sans', sans-serif;
+background-color: var(--primary-light);
+/* overflow: hidden; */
+
+display: flex;
+justify-content: center;
+flex-direction: column;
+
+min-height: 100vh;
+}
+
+select:focus, input:focus, button:focus{
+  outline:none;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+/* -------- CLASS --------- */
+
+/* -------- PSEUDO CLASS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+  
+}
+
+.container-img{
+  padding: 3vh 5vw;
+  display: block;
+}
+
+/* Firefox, Chrome, Safari, IE6-9 */
+
+img.grayscale {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  /* Firefox 3.5+, IE10 */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+  /* Chrome 19+ & Safari 6+ */
+  -webkit-transition: all .6s ease;
+  /* Fade to color for Chrome and Safari */
+  -webkit-backface-visibility: hidden;
+  /* Fix for transition flickering */
+  width: 400px;
+}
+
+img.grayscale:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+
+/* IE10 with inline SVG Image */
+
+.svg-first {
+  background: url(https://images.unsplash.com/photo-1591160690555-5debfba289f0?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928);
+  background-size: cover;
+}
+
+.svg-first image {
+  transition: all .6s ease;
+}
+
+.svg-first image:hover {
+  opacity: 0;
+}
+
+/* Grayscale and colored images individual */
+
+#google {
+  background: url('http://www.google.com/logos/keystroke10-hp.png');
+  height: 95px;
+  width: 275px;
+  display: block;
+  /* Optional for a gradual animation effect */
+  transition: 0.5s;
+}
+
+#google:hover {
+  background: url('https://graphics217b.files.wordpress.com/2011/02/logo1w.png');
+}
+
+
+/* SVG Image Hover */
+.svg-last {
+  background: url(https://images.unsplash.com/photo-1591160690555-5debfba289f0?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928);
+  /* Firefox 3.5+ */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(1);
+  /* Google Chrome & Safari 6+ */
+  transition: 0.5s;
+  background-size: cover;
+}
+.svg-last:hover {
+  filter: none;
+  -webkit-filter: none;
+}
+
+/* Overlay Image Hover Dark */
+.img-responsive{
+  width: 400px;
+}
+
+.overlay {
+  position: relative;
+  display: inline-block;
+  background: cyan;
+  display: inline-block;
+}
+
+.overlay > img {
+  vertical-align: middle;
+}
+
+.overlay::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.overlay:hover::before {
+  opacity: 0.23;
+}
+
+
+/* Overlay Image Hover Light Responsive */
+
+.container-2 {
+  position: relative;
+  width: 40%;
+}
+
+.container-2 .img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay-2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #fff;
+}
+
+.container-2:hover .overlay-2 {
+  opacity: 0.7;
+}
