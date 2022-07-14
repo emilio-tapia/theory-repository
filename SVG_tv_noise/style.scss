@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap');
+
+$font1: 'Poppins', sans-serif;
+$font2: 'Lobster Two', cursive;
+$white:#fff;
+$black:#000;
+$primary-light: #f9fafb;
+$second-light:#f0f0f0;
+$third-light:#DADBDB;
+
+$primary-grey:#2229;
+$second-grey:#4f4f4f;
+
+$first-shadow: rgba(0, 0, 0, 0.4);
+
+$success: rgba(61, 168, 102, 0.3);
+$error: rgba(168, 30, 14, 0.6);
+
+$primary-color:#4c8061;
+
+/* GLOBAL CONFIG RESET */
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+select:focus, input:focus, button:focus{
+  outline:none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+font-family: 'Heebo', sans-serif;
+background-color: var(--primary-light);
+// overflow: hidden;
+
+// display: flex;
+// flex-direction: column;
+// justify-content: center;
+// align-items: center;
+
+// height: 100vh;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+section{
+  position: absolute;
+    top: -50px;
+    left: -50px;
+  height: calc(100% + 50px);
+  width: calc(100% + 50px);
+  background: repeating-linear-gradient(#111, #111 50%, #fff 50%, #fff);
+  background-size: 5px 5px;
+  filter: url(#noise);
+  z-index: -1;
+}
+
+.controls{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary-grey;
+  border-radius: 16px;
+  z-index: 5;
+  // border: 1px solid black;
+  margin: 1em 10em;
+  padding-right: 20px;
+  box-shadow: 
+  0 0 10px $first-shadow,
+  0 0 20px $first-shadow,
+  0 0 30px $first-shadow,
+  0 0 60px $first-shadow;
+  
+
+  span{
+    transform: translate(-20%, 0%);
+    color: $white;
+    font-weight: 800;
+    margin: 0em 2em ;
+    text-transform: uppercase;
+
+    &:nth-child(1), &:nth-child(4){
+      margin-right: 0;
+    }
+  }
+}
+
+/* -------- CLASS --------- */
+
+/* -------- PSEUDO CLASS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+  
+}
