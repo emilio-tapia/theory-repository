@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    /> -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <h1>CENTER ELEMENTS</h1>
+
+    <div class="horizontalFlex">
+
+      <div class="container" style="--i: 10">
+        <h2 class="title">Parent Div</h2>
+        <span class="subtitle">text-align: center // ON PARENT</span>
+        <h3 class="center">H3 Center - Block</h3>
+        <div class="center">Div Center - Block</div>
+        <span class="center">Span Center - Inline</span>
+      </div>
+      <div class="container" style="--i: 20">
+        <h2 class="title">Text</h2>
+        <span class="subtitle">text-align: center // ON ELEMENTS</span>
+        <h3 class="center">H3 Center - Block</h3>
+        <div class="center">Div Center - Block</div>
+        <span class="center">Span Center - Inline</span>
+      </div>
+      <div class="container" style="--i: 30">
+        <h2 class="title">Text Block + Width</h2>
+        <span class="subtitle"
+          >margin-left: auto; <br />
+          margin-right: auto; <br />
+          width: 40vw;</span
+        >
+        <p class="center">
+          This is a block of code. This is a block of code. This is a block of
+          code. This is a block of code. This is a block of code. This is a block
+          of code. This is a block of code.
+        </p>
+        <div class="center">Div Center - Block</div>
+        <span class="center">Span Center - Inline</span>
+      </div>
+      <div class="container" style="--i: 40">
+        <h2 class="title">Text Block + Display Block</h2>
+        <span class="subtitle"
+          >display: block; <br />
+          margin-left: auto; <br />
+          margin-right: auto; <br />
+          width: 40vw;</span
+        >
+        <p class="center">
+          This is a block of code. This is a block of code. This is a block of
+          code. This is a block of code. This is a block of code. This is a block
+          of code. This is a block of code.
+        </p>
+        <div class="center">Div Center - Block</div>
+        <span class="center">Span Center - Inline</span>
+      </div>
+      <div class="container" style="--i: 50">
+        <h2 class="title">Parent/Child - Position %</h2>
+        <span class="subtitle"
+          >position: relative; //PARENT <br />
+          margin: 0; <br />
+          position: absolute; <br />
+          top: 50%; <br />
+          left: 50%; <br />
+          margin-right: -50%; <br />
+          transform: translate(-50%, -50%);</span
+        >
+        <div class="containerChilds">
+          <div class="center">Div Center - Block</div>
+          <span class="center">Span Center - Inline</span>
+        </div>
+      </div>
+      <div class="container" style="--i: 60">
+        <h2 class="title">Flex</h2>
+        <span class="subtitle"
+          >display: flex; // PARENT <br />
+          align-items: center; // PARENT <br />
+          flex-direction: column; // PARENT <br />
+          display: flex; // CHILD <br />
+          justify-content: center; // CHILD<br />
+          text-align: center; // CHILD <br />
+        </span>
+        <p class="center">
+          This is a block of code. This is a block of code. This is a block of
+          code. This is a block of code. This is a block of code. This is a block
+          of code. This is a block of code.
+        </p>
+        <div class="center">Div Center - Block</div>
+        <span class="center">Span Center - Inline</span>
+      </div>
+      <div class="container" style="--i: 70">
+        <h2 class="title">Flex + Fixed Width</h2>
+        <span class="subtitle"
+          >display: flex; // PARENT <br />
+          align-items: center; // PARENT <br />
+          flex-direction: column; // PARENT <br />
+          display: flex; // CHILD <br />
+          justify-content: center; // CHILD<br />
+          text-align: center; // CHILD <br />
+        </span>
+        <p class="center">
+          This is a block of code. This is a block of code. This is a block of
+          code. This is a block of code. This is a block of code. This is a block
+          of code. This is a block of code.
+        </p>
+        <div class="center">Div Center - Block</div>
+        <span class="center">Span Center - Inline</span>
+      </div>
+    </div>
+
+    <div class="verticalTable">
+      <div class="container" style="--i: 80">
+        <h2 class="title">Table Cell <br>Vertical Align</h2>
+        <span class="subtitle"></span>
+          display: table-cell; <br>
+          vertical-align: middle;
+        </span>
+      </div>
+      <div class="container" style="--i: 90">
+        <div class="childContainer">
+          <h2 class="title">Parent-Child Position %<br>Vertical Align</h2>
+          <span class="subtitle"></span>
+          position: relative; //PARENT <br>
+          width: 30vw; // PARENT <br>
+          position: absolute; <br>
+          top: 50%; <br>
+          transform: translate(0, -50%)
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="verticalFlex">
+      <div class="container" style="--i: 183">
+        <h2 class="title">Flex <br>Vertical Align</h2>
+        <span class="subtitle"></span>
+          display: table-cell; <br>
+          vertical-align: middle; <br>
+          <br>
+          <br>
+        </span>
+        <h3>DOES NOT WORK ON <br> PARENT FLEX</h3>
+      </div>
+      <div class="container" style="--i: 100">
+
+          <h2 class="title">Table Cell <br>Vertical Align</h2>
+          <span class="subtitle"></span>
+          display: flex; <br>
+          justify-content: center; <br>
+          flex-direction: column;
+          </span>
+      </div>
+    </div>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
