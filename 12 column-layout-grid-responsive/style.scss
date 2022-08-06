@@ -1,0 +1,65 @@
+@import 'helpers';
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include reset();
+}
+
+select:focus, input:focus, button:focus{
+  outline:none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+background-color: $primary-light;
+// overflow: hidden;
+
+// @include flexDisplay(center, center, column, wrap)
+
+// height: 100vh;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+/* -------- CLASS & ID --------- */
+
+.gridVisibility{
+  display: flex;
+  position: fixed;
+  z-index: 101;
+  right: 0;
+  margin: 16px;
+  input{
+    margin: 0 10px;
+    transform: translateY(3px);
+  }
+  span{
+    font-weight: bold;
+  }
+}
+
+.grid{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  width: calc(100% - 24px);
+  position: fixed;
+  padding: 0 12px;
+  z-index: 100;
+  span{
+    border: 1px solid #0002;
+    background: #0002;
+    height: 100%;
+    margin: 0 4px;
+    width: 100%;
+  }
+}
+
+/* -------- ANIMATIONS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+  
+}
