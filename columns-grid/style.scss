@@ -1,0 +1,123 @@
+@import 'helpers';
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include reset();
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: $primary-dark;
+  // overflow: hidden;
+
+  // @include flexDisplay(center, center, column, wrap)
+
+  // height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  display: flow-root;
+  // gap: 2rem;
+  margin-block: 2rem;
+  padding-inline: 2rem;
+}
+
+body > * + * {
+  margin-top: 2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+legend {
+  font-size: large;
+  font-weight: lighter;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: medium;
+  font-weight: lighter;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+}
+
+h1,
+legend,
+h2,
+p {
+  color: white;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+.subtitle {
+  text-align: right;
+  opacity: 0.5;
+}
+
+.cta {
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(-45deg, red, blue);
+}
+
+.evencolumns {
+  & > div {
+    outline: 1px solid pink;
+  }
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+
+  & > div {
+    flex: 1;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+
+@include breakpoint(560) {
+  .grid {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+
+/* -------- CLASS & ID --------- */
+
+/* -------- ANIMATIONS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+}

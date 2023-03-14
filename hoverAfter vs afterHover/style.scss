@@ -1,0 +1,80 @@
+@import 'helpers';
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include reset();
+}
+
+select:focus, input:focus, button:focus{
+  outline:none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+background-color: $primary-dark;
+// overflow: hidden;
+
+@include flexDisplay(center, center, column, wrap);
+
+height: 100vh;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+button{
+  background: $primary-orange;
+  color: $white;
+  font-size: 1em;
+  border-radius: 0.5em;
+  padding: 0 1em;
+  position: relative;
+  // overflow: hidden;
+  line-height: 32px;
+  border: 1px solid black;
+  border: 0;
+  box-shadow: 
+  0 0 10px $primary-orange,
+  0 0 20px $primary-orange,
+  0 0 40px $primary-orange,
+  0 0 80px $primary-orange;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 254, 223, 0.5) 50%, rgba(229, 172, 142, 0));
+    transform: rotateZ(60deg) translate(-5em, 7.5em);
+    border: 5px solid red;
+    &:hover, 
+    &:active {
+      animation: sheen 2s forwards;
+    animation-delay: 1s;
+    }
+
+  }
+
+  &:hover::after, 
+  &:active::after {
+    animation: sheen 2s forwards;
+  animation-delay: 1s;
+  }
+}
+
+/* -------- CLASS & ID --------- */
+
+/* -------- ANIMATIONS --------- */
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(1em, -9em);
+  }
+}
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+  
+}

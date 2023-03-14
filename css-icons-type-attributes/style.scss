@@ -1,0 +1,87 @@
+@import 'helpers';
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include reset();
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background: linear-gradient(42deg, #85b872, #5177ff);
+  // overflow: hidden;
+
+  @include flexDisplay(flex-start, center, column, wrap);
+  margin-left: 4rem;
+  min-height: 100vh;
+  gap: 2rem;
+}
+
+.download-links {
+  display: grid;
+  gap: 1rem;
+  width: 10rem;
+
+  a {
+    display: inline-block;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.2) no-repeat 10px 6px;
+    background-size: 26.5px auto;
+    transition: background 0.3s;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: $black;
+    text-align: right;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    &[href$='avi'] {
+      background-image: url('./icons/avi-file-icon.svg');
+    }
+    &[href$='gif'] {
+      background-image: url('./icons/gif-file-icon.svg');
+    }
+    &[href$='iso'] {
+      background-image: url('./icons/iso-file-icon.svg');
+    }
+    &[href$='jpg'] {
+      background-image: url('./icons/jpg-file-icon.svg');
+    }
+    &[href$='mov'] {
+      background-image: url('./icons/mov-file-icon.svg');
+    }
+    &[href$='mp3'] {
+      background-image: url('./icons/mp3-file-icon.svg');
+    }
+    &[href$='mp4'] {
+      background-image: url('./icons/mp4-file-icon.svg');
+    }
+    &[href$='png'] {
+      background-image: url('./icons/png-file-icon.svg');
+    }
+    &[href$='zip'] {
+      background-image: url('./icons/zip-file-icon.svg');
+    }
+  }
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+/* -------- CLASS & ID --------- */
+
+/* -------- ANIMATIONS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+}

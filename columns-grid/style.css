@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap");
+/* GLOBAL CONFIG RESET */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: #222;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flow-root;
+  margin-block: 2rem;
+  padding-inline: 2rem;
+}
+
+body > * + * {
+  margin-top: 2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+legend {
+  font-size: large;
+  font-weight: lighter;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: medium;
+  font-weight: lighter;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+}
+
+h1,
+legend,
+h2,
+p {
+  color: white;
+}
+
+/* -------- TYPE SELECTORS --------- */
+.subtitle {
+  text-align: right;
+  opacity: 0.5;
+}
+
+.cta {
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(-45deg, red, blue);
+}
+
+.evencolumns > div {
+  outline: 1px solid pink;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.flex > div {
+  flex: 1;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (min-width: 560px) {
+  .grid {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+/* -------- CLASS & ID --------- */
+/* -------- ANIMATIONS --------- */
+/* -------- MEDIA QUERY --------- *//*# sourceMappingURL=style.css.map */

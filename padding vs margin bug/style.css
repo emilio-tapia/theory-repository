@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap");
+/* GLOBAL CONFIG RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+select:focus, input:focus, button:focus {
+  outline: none;
+}
+
+/* -------- BODY DISPLAY --------- */
+html, body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primary-light);
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  height: 100%;
+}
+
+/* -------- TYPE SELECTORS --------- */
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2196f3;
+  overflow: hidden;
+}
+
+/* -------- CLASS --------- */
+.swiper-container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.swiper-container .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 320px;
+  background: #fff;
+  border: 1px dashed black;
+  padding: 10px;
+}
+.swiper-container .swiper-slide .testimonialBox {
+  border: 1px solid black;
+  width: 100%;
+  position: relative;
+  padding: 40px;
+}
+.swiper-container .swiper-slide img {
+  display: inline-block;
+  width: 30%;
+}
+
+/* -------- PSEUDO CLASS --------- */
+/* -------- MEDIA QUERY --------- *//*# sourceMappingURL=style.css.map */

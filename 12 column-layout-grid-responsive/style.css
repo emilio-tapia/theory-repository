@@ -20,50 +20,37 @@ body {
 /* -------- TYPE SELECTORS --------- */
 /* -------- CLASS & ID --------- */
 .gridVisibility {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: fixed;
   z-index: 101;
   right: 0;
   margin: 16px;
 }
-
 .gridVisibility input {
   margin: 0 10px;
-  -webkit-transform: translateY(3px);
-          transform: translateY(3px);
+  transform: translateY(3px);
 }
-
 .gridVisibility span {
   font-weight: bold;
 }
 
 .grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   height: 100vh;
   width: calc(100% - 24px);
   position: fixed;
   padding: 0 12px;
   z-index: 100;
 }
-
 .grid span {
-  border: 1px solid #0002;
-  background: #0002;
+  border: 1px solid rgba(0, 0, 0, 0.1333333333);
+  background: rgba(0, 0, 0, 0.1333333333);
   height: 100%;
   margin: 0 4px;
   width: 100%;
 }
 
 /* -------- ANIMATIONS --------- */
-/* -------- MEDIA QUERY --------- */
-/*# sourceMappingURL=style.css.map */
+/* -------- MEDIA QUERY --------- *//*# sourceMappingURL=style.css.map */

@@ -21,127 +21,88 @@ body {
 /* -------- TYPE SELECTORS --------- */
 /* -------- CLASS & ID --------- */
 .horizontalFlex .container {
-  background: hsl(calc(2*var(--i)), 48%, 57%);
+  background: hsl(calc(2 * var(--i)), 48%, 57%);
   width: 100%;
   padding: 1em 0em;
   border-radius: 8px;
   margin: 0.5em 0em;
 }
-
 .horizontalFlex .container .title {
   font-size: 2em;
   -webkit-margin-after: 0;
           margin-block-end: 0;
   text-align: center;
 }
-
 .horizontalFlex .container .subtitle {
   display: block;
   font-size: 0.7em;
   margin-bottom: 1em;
   text-align: center;
 }
-
 .horizontalFlex .container .center {
   background: rgba(0, 0, 0, 0.3);
   border: 1px dashed black;
   color: #fff;
   margin: 0.5em 0em;
 }
-
 .horizontalFlex .container:nth-child(1) {
   text-align: center;
   border: 2px dashed black;
 }
-
 .horizontalFlex .container:nth-child(1) .center {
   border: 1px solid black;
 }
-
 .horizontalFlex .container:nth-child(2) .center {
   text-align: center;
 }
-
 .horizontalFlex .container:nth-child(3) .center {
   margin-left: auto;
   margin-right: auto;
   width: 40vw;
 }
-
 .horizontalFlex .container:nth-child(4) .center {
   margin-left: auto;
   margin-right: auto;
   width: 40vw;
   display: block;
 }
-
 .horizontalFlex .container:nth-child(5) .containerChilds {
   position: relative;
   border: 1px solid black;
   padding: 2em 4em;
 }
-
 .horizontalFlex .container:nth-child(5) .containerChilds .center {
   margin: 0;
   position: absolute;
   left: 50%;
   margin-right: -50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 .horizontalFlex .container:nth-child(5) .containerChilds .center:nth-child(1) {
   top: 25%;
 }
-
 .horizontalFlex .container:nth-child(5) .containerChilds .center:nth-child(2) {
   top: 75%;
 }
-
 .horizontalFlex .container:nth-child(6) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  flex-direction: column;
 }
-
 .horizontalFlex .container:nth-child(6) .center {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   text-align: center;
 }
-
 .horizontalFlex .container:nth-child(7) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  flex-direction: column;
 }
-
 .horizontalFlex .container:nth-child(7) .center {
   width: 70vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -150,104 +111,78 @@ body {
   margin: 1em 0em;
   border: 1px dashed black;
 }
-
 .verticalTable .container {
-  background: hsl(calc(2*var(--i)), 48%, 57%);
+  background: hsl(calc(2 * var(--i)), 48%, 57%);
   padding: 1em 0em;
   border-radius: 8px;
   margin: 0em 1em;
   height: 80vh;
   text-align: center;
 }
-
 .verticalTable .container .title {
   display: block;
   font-size: 2em;
   -webkit-margin-after: 0;
           margin-block-end: 0;
 }
-
 .verticalTable .container .subtitle {
   display: block;
   font-size: 0.7em;
   margin-bottom: 1em;
 }
-
 .verticalTable .container:nth-child(1) {
   display: table-cell;
   vertical-align: middle;
   padding: 0 2em;
 }
-
 .verticalTable .container:nth-child(2) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
   padding: 0 2em;
   width: 38vw;
 }
-
 .verticalTable .container:nth-child(2) .childContainer {
   text-align: left;
-  position: absolute;
-  /* 2 */
-  top: 50%;
-  /* 3 */
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  position: absolute; /* 2 */
+  top: 50%; /* 3 */
+  transform: translate(0, -50%);
 }
 
 .verticalFlex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 1em 0em;
   border: 1px dashed black;
 }
-
 .verticalFlex .container {
-  background: hsl(calc(2*var(--i)), 48%, 57%);
+  background: hsl(calc(2 * var(--i)), 48%, 57%);
   padding: 1em 0em;
   border-radius: 8px;
   margin: 0em 1em;
   height: 80vh;
 }
-
 .verticalFlex .container .title {
   font-size: 2em;
   -webkit-margin-after: 0;
           margin-block-end: 0;
   text-align: center;
 }
-
 .verticalFlex .container .subtitle {
   display: block;
   font-size: 0.7em;
   margin-bottom: 1em;
   text-align: center;
 }
-
 .verticalFlex .container:nth-child(1) {
   display: table-cell;
   vertical-align: middle;
   padding: 0 2em;
 }
-
 .verticalFlex .container:nth-child(2) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
   padding: 0 2em;
 }
 
 /* -------- ANIMATIONS --------- */
-/* -------- MEDIA QUERY --------- */
-/*# sourceMappingURL=style.css.map */
+/* -------- MEDIA QUERY --------- *//*# sourceMappingURL=style.css.map */

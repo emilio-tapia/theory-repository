@@ -15,8 +15,7 @@
 
 /* GLOBAL CONFIG RESET */
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 0.9rem;
   margin: 0;
   padding: 0;
@@ -24,22 +23,13 @@
 
 /* -------- BODY DISPLAY --------- */
 body {
-  font-family: 'Open-Sans', sans-serif;
+  font-family: "Open-Sans", sans-serif;
   background-color: var(--primary-grey);
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
@@ -54,13 +44,9 @@ select:focus, input:focus, button:focus {
   margin: 2vh 1vw;
   border-radius: 1rem;
   width: 15%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-shadow: 4px 4px 1px 0px black;
-          box-shadow: 4px 4px 1px 0px black;
+  justify-content: center;
+  box-shadow: 4px 4px 1px 0px black;
 }
-
 .blinks:hover {
   background-color: rgba(238, 238, 238, 0.87);
 }
@@ -72,34 +58,23 @@ select:focus, input:focus, button:focus {
 }
 
 .blink_me-step {
-  -webkit-animation: blinker 1.7s step-start infinite;
-          animation: blinker 1.7s step-start infinite;
+  animation: blinker 1.7s step-start infinite;
 }
 
 .blink_me-bezier {
-  -webkit-animation: blinker 1.7s cubic-bezier(1, 0, 0, 1) infinite alternate;
-          animation: blinker 1.7s cubic-bezier(1, 0, 0, 1) infinite alternate;
+  animation: blinker 1.7s cubic-bezier(1, 0, 0, 1) infinite alternate;
 }
 
 .blink_me-ease {
-  -webkit-animation: blinker 1.7s ease-in-out infinite alternate;
-          animation: blinker 1.7s ease-in-out infinite alternate;
+  animation: blinker 1.7s ease-in-out infinite alternate;
 }
 
 .blink_me:hover, .blink_me-step:hover, .blink_me-bezier:hover, .blink_me-ease:hover {
-  -webkit-animation: none;
-          animation: none;
-}
-
-@-webkit-keyframes blinker {
-  50% {
-    opacity: 0;
-  }
+  animation: none;
 }
 
 @keyframes blinker {
   50% {
     opacity: 0;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

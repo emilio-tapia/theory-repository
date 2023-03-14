@@ -1,0 +1,187 @@
+@import 'helpers';
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include reset();
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: $primary-light;
+  // overflow: hidden;
+
+  @include flexDisplay(center, center, column, wrap);
+  height: 100vh;
+  gap: 3rem;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+button {
+  border: 0;
+
+  &:active {
+    outline: none;
+  }
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+/* -------- CLASS & ID --------- */
+
+.content {
+  position: relative;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  background: #8eb58a;
+  color: black;
+  width: 70%;
+  @include flexDisplay(center, center, column, wrap);
+
+  &::after {
+    content: '';
+    width: 95%;
+    position: absolute;
+    height: 80%;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    z-index: -1;
+  }
+
+  .background-popup {
+    &.active {
+      opacity: 1;
+      backdrop-filter: blur(25px) grayscale(0.8);
+    }
+    opacity: 0;
+    border-radius: 0.75rem;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(0) grayscale(0);
+    transition: 0.618s;
+  }
+
+  .popup {
+    &.active {
+      opacity: 1;
+    }
+    opacity: 0;
+    border-radius: 0.75rem;
+    position: absolute;
+    inset: 0;
+    width: 25%;
+    height: fit-content;
+    margin: auto;
+    background: #ff0d00;
+    color: white;
+    padding: 0.5rem 1rem;
+    @include flexDisplay(center, space-between, row, wrap);
+    box-shadow: 0 3px 10px rgba(200, 0, 0, 0.8);
+    transition: 1s ease;
+
+    button {
+      font-weight: bolder;
+      border-radius: 50%;
+      width: 33px;
+      height: 33px;
+      color: white;
+      border: 1px solid transparent;
+      background: none;
+      cursor: pointer;
+      transition: 0.618s;
+
+      &:hover {
+        border: 1px solid white;
+      }
+      &:active {
+        transform: scale(0.94);
+      }
+    }
+  }
+}
+
+.button-wrapper {
+  place-content: center;
+
+  button {
+    place-content: center;
+    background: black;
+    padding: 0.5rem 0.6rem;
+    border-radius: 0.25rem;
+    color: $white;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    position: absolute;
+    bottom: 2rem;
+    transform: scale(1) translate(-50%, 0);
+    // box-shadow: 0px 0px 0 $black;
+    cursor: pointer;
+    display: flex;
+
+    span {
+      visibility: hidden;
+    }
+
+    &::after {
+      content: 'Click me';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.25rem;
+      background: red;
+      inset: 0;
+      position: absolute;
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      transition: transform 0.25s;
+      border: 1px solid black;
+    }
+
+    &:hover {
+      color: $white;
+
+      background: #111;
+      // transform: scale(1.1) translate(-50%, 0%);
+      transition: transform 0.3s 0.2s, background 0.3s 0.2s,
+        box-shadow 0.3s 0.2s;
+      // box-shadow: 3px 3px 0 $black;
+
+      &::after {
+        transform: translate(-0.2rem, -0.2rem);
+        transition: transform 0.25s 0.05s;
+      }
+    }
+
+    &:active {
+      color: $white;
+
+      background: #000;
+      // transform: scale(1.1) translate(-50%, 0%);
+      transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+      // box-shadow: 0px 0px 0 $black;
+
+      &::after {
+        transform: translate(0%, 0%);
+        transition: transform 0.25s 0.05s;
+      }
+    }
+  }
+}
+
+/* -------- ANIMATIONS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+}

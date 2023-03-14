@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap');
+
+$font1: 'Poppins', sans-serif;
+$font2: 'Lobster Two', cursive;
+$white:#fff;
+$black:#000;
+$primary-light: #eee;
+$second-light:#f0f0f0;
+$third-light:#DADBDB;
+
+$primary-grey:#777;
+$second-grey:#4f4f4f;
+
+$first-shadow: rgba(0,0,0,0.3);
+
+$success: rgba(61, 168, 102, 0.6);
+$error: rgba(168, 30, 14, 0.6);
+
+$primary-color:#4c8061;
+
+/* GLOBAL CONFIG RESET */
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+select:focus, input:focus, button:focus{
+  outline:none;
+}
+
+/* -------- BODY DISPLAY --------- */
+html, body {
+font-family: 'Poppins', sans-serif;
+background-color: var(--primary-light);
+// font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+font-size: 14px;
+color: $black;
+margin: 0;
+padding: 0;
+// overflow: hidden;
+
+// display: flex;
+// flex-direction: column;
+// justify-content: center;
+// align-items: center;
+
+position: relative;
+height: 100%;
+}
+
+
+
+/* -------- TYPE SELECTORS --------- */
+
+section{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  background-color: #2196f3;
+  overflow: hidden;
+}
+
+/* -------- CLASS --------- */
+
+.swiper-container {
+  // width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 320px;
+    background: $white;
+    border: 1px dashed black;
+    padding: 10px;
+
+    .testimonialBox{
+      border: 1px solid black;
+
+      width: 100%;
+      position: relative;
+      padding: 40px;
+    }
+
+    img{
+      display: inline-block;
+      width: 30%;
+    }
+  }
+}
+
+
+/* -------- PSEUDO CLASS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+  
+}

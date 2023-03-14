@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap");
+/* GLOBAL CONFIG RESET */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background: linear-gradient(42deg, #85b872, #5177ff);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 4rem;
+  min-height: 100vh;
+  gap: 2rem;
+}
+
+.download-links {
+  display: grid;
+  gap: 1rem;
+  width: 10rem;
+}
+.download-links a {
+  display: inline-block;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.2) no-repeat 10px 6px;
+  background-size: 26.5px auto;
+  transition: background 0.3s;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  text-align: right;
+}
+.download-links a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.download-links a[href$=avi] {
+  background-image: url("./icons/avi-file-icon.svg");
+}
+.download-links a[href$=gif] {
+  background-image: url("./icons/gif-file-icon.svg");
+}
+.download-links a[href$=iso] {
+  background-image: url("./icons/iso-file-icon.svg");
+}
+.download-links a[href$=jpg] {
+  background-image: url("./icons/jpg-file-icon.svg");
+}
+.download-links a[href$=mov] {
+  background-image: url("./icons/mov-file-icon.svg");
+}
+.download-links a[href$=mp3] {
+  background-image: url("./icons/mp3-file-icon.svg");
+}
+.download-links a[href$=mp4] {
+  background-image: url("./icons/mp4-file-icon.svg");
+}
+.download-links a[href$=png] {
+  background-image: url("./icons/png-file-icon.svg");
+}
+.download-links a[href$=zip] {
+  background-image: url("./icons/zip-file-icon.svg");
+}
+
+/* -------- TYPE SELECTORS --------- */
+/* -------- CLASS & ID --------- */
+/* -------- ANIMATIONS --------- */
+/* -------- MEDIA QUERY --------- *//*# sourceMappingURL=style.css.map */

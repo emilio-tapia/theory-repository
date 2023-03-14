@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap");
+/* GLOBAL CONFIG RESET */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: #222;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+/* -------- TYPE SELECTORS --------- */
+h1 {
+  text-transform: uppercase;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 8rem;
+  text-align: center;
+  background-image: linear-gradient(to right, rgb(106, 106, 202), rgb(49, 85, 68), rgb(132, 189, 132), rgb(73, 108, 73), rgb(106, 106, 202));
+  background-size: 500px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: movingGradient 10s linear infinite;
+  text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes movingGradient {
+  100% {
+    background-position: -1000px;
+  }
+}
+/* -------- CLASS & ID --------- */
+/* -------- ANIMATIONS --------- */
+/* -------- MEDIA QUERY --------- *//*# sourceMappingURL=style.css.map */
