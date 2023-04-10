@@ -1,0 +1,130 @@
+@import 'helpers';
+
+/* GLOBAL CONFIG RESET */
+*,
+*::before,
+*::after {
+  @include reset();
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: $primary-dark;
+  color: white;
+  // overflow: hidden;
+
+  // @include flexDisplay(center, center, column, wrap)
+
+  font-family: system-ui;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  max-width: 50rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+section {
+  // background: skyblue;
+  // margin-block: 15rem;
+  padding-block: 5rem;
+}
+
+section.diagonal {
+  position: relative;
+  isolation: isolate;
+  margin-block: 20rem;
+  padding-block: 5rem;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: skewY(324deg);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -118%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #222222 30%, transparent);
+  }
+
+  .container {
+    transform: skewY(17deg) skewX(1deg);
+    text-shadow: 0 5px 10px black;
+  }
+}
+
+section.spike {
+  --bg-color: linear-gradient(to right, #fdc830, #f37335);
+  --height: 50px;
+  --width: 700px;
+  position: relative;
+  color: black;
+  background: var(--bg-color);
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: var(--height);
+    background: var(--bg-color);
+    background: $primary-dark;
+    mask-image: url('svg-path.svg');
+    -webkit-mask-image: url('svg-path.svg');
+    mask-size: var(--width) calc(var(--height) + 2px);
+    -webkit-mask-size: var(--width) calc(var(--height) + 2px);
+  }
+
+  &::after {
+    top: -1px;
+  }
+
+  &::before {
+    bottom: -1px;
+    transform: rotate(0.5turn);
+  }
+}
+
+section.wavy {
+  --mask: radial-gradient(37.5px at 50% 52.5px, #000 99%, #0000 101%)
+      calc(50% - 60px) 0/120px 51% repeat-x,
+    radial-gradient(37.5px at 50% -22.5px, #0000 99%, #000 101%) 50% 30px/120px
+      calc(51% - 30px) repeat-x,
+    radial-gradient(37.5px at 50% calc(100% - 52.5px), #000 99%, #0000 101%)
+      calc(50% - 60px) 100%/120px 51% repeat-x,
+    radial-gradient(37.5px at 50% calc(100% + 22.5px), #0000 99%, #000 101%) 50%
+      calc(100% - 30px) / 120px calc(51% - 30px) repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  background: linear-gradient(to right, #00f260, #0575e6);
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+/* -------- CLASS & ID --------- */
+
+/* -------- ANIMATIONS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+}

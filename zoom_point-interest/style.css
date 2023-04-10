@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap");
+:root {
+  --yellow: #debf45;
+}
+
+/* GLOBAL CONFIG RESET */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3rem;
+  height: 100vh;
+  padding-inline: 2rem;
+}
+
+p,
+a {
+  color: white;
+  font-size: 2rem;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+p:hover,
+a:hover {
+  color: var(--yellow);
+  transform: scale(1.05) translateX(0.5rem);
+}
+p:active,
+a:active {
+  transform: scale(1);
+}
+
+/* -------- TYPE SELECTORS --------- */
+/* -------- CLASS & ID --------- */
+#zoom_image {
+  background-image: url("https://images.unsplash.com/photo-1606421753414-8d165c9d48e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-repeat: no-repeat;
+  border: 3px solid var(--yellow);
+  aspect-ratio: 3/2;
+  border-radius: 10px;
+  flex: 1;
+  transition: background-size 1s, background-position 0.3s;
+}
+#zoom_image[data-position=default] {
+  background-size: 100% auto;
+  background-position: 0 0;
+  transition: background-size 1s, background-position 1s 1s;
+}
+#zoom_image[data-position=power] {
+  background-size: 330% auto;
+  background-position: 85% 85%;
+}
+#zoom_image[data-position=utp] {
+  background-size: 330% auto;
+  background-position: 53% 85%;
+}
+#zoom_image[data-position=reset] {
+  background-size: 400% auto;
+  background-position: 17% 81%;
+}
+
+#zoom_links {
+  flex: 0.25;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#zoom_links > * + * {
+  font-weight: 300;
+}
+
+/* -------- ANIMATIONS --------- */
+/* -------- MEDIA QUERY --------- *//*# sourceMappingURL=style.css.map */

@@ -1,0 +1,89 @@
+@use 'helpers' as h;
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include h.reset();
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: h.$primary-dark;
+  // overflow: hidden;
+  color: white;
+
+  // @include flexDisplay(center, center, column, wrap)
+
+  // height: 100vh;
+}
+
+h1 {
+  padding: 3rem;
+  text-align: center;
+  font-size: 4rem;
+}
+
+p {
+  color: hsl(0, 0%, 70%);
+}
+
+main {
+  max-width: 968px;
+  width: calc(100% - 3rem);
+  margin-inline: auto;
+  padding: 0;
+}
+
+section {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 0.5fr;
+
+  .aside {
+    display: inline-block;
+    position: relative;
+
+    & > * {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    div[aria-hidden='false'] {
+      opacity: 1;
+    }
+  }
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+/* -------- CLASS & ID --------- */
+
+/* -------- ANIMATIONS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+}

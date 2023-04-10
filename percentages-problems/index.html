@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    /> -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Percentage Problems</h1>
+    <div class="example">
+      <div class="container">
+        <div class="grid percentage">
+          <div class="grid__item"></div>
+          <div class="grid__item"></div>
+        </div>
+      </div>
+
+      <pre>
+        <code class="code">
+          //OVERFLOW 50%
+          
+          .grid {
+            display: grid;
+            grid-template-columns: 50% 50%; 
+            gap: 4rem;
+          }
+        </code>
+      </pre>
+    </div>
+    <div class="example">
+      <div class="container">
+        <div class="grid fr">
+          <div class="grid__item"></div>
+          <div class="grid__item"></div>
+        </div>
+      </div>
+
+      <pre>
+        <code class="code">
+          //NO OVERFLOW
+
+          .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 4rem;
+          }
+        </code>
+      </pre>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
