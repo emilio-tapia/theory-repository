@@ -1,0 +1,115 @@
+@use 'helpers' as h;
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include h.reset();
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: h.$primary-dark;
+  // overflow: hidden;
+
+  // @include flexDisplay(center, center, column, wrap)
+
+  // height: 100vh;
+  color: white;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+main {
+  padding: 2rem;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+/* -------- CLASS & ID --------- */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.menu {
+  --ideal-size: 10rem;
+  flex-basis: var(--ideal-size); // IDEAL SIZE WE WANT TO HACE
+  flex-grow: 1; // IF NOT IS THE IDEAL SIZE THEN GROW TO EXPAND
+
+  ul {
+    display: flex;
+    flex-wrap: wrap; // WRAP WHEN WINDOW CHANGE
+    gap: 0.25rem;
+  }
+
+  li {
+    flex-grow: 1; // TAKE ALL SPACE
+    flex-basis: calc(var(--ideal-size) / 2); //
+    button {
+      width: 100%;
+    }
+  }
+}
+
+.blog {
+  flex-basis: 0; // INITIAL SIZE IS 0
+  flex-grow: 999; // EXPAND ALL THE SPACE
+  min-width: 70%; // MINIMUN WIDTH 70%, NO LESS THAN THAT
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+
+  &__card {
+    display: grid;
+    background: #427098;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  &__card-layout {
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+    img {
+      aspect-ratio: 16 / 9;
+    }
+  }
+
+  &__card-text {
+    padding: 1rem;
+
+    p {
+      font-size: 0.725rem;
+      font-weight: lighter;
+    }
+  }
+}
+
+/* -------- ANIMATIONS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+}

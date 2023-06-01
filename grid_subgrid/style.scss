@@ -1,0 +1,125 @@
+@use 'helpers' as h;
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include h.reset();
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: h.$primary-light;
+  // overflow: hidden;
+
+  // @include flexDisplay(center, center, column, wrap)
+
+  // height: 100vh;
+  padding-inline: 1rem;
+}
+
+h1 {
+  width: fit-content;
+  color: #c00000;
+  font-size: 4rem;
+  padding-block: 2rem;
+}
+
+main {
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(1, auto 1fr auto);
+  gap: 1rem;
+}
+
+.card {
+  padding: 1rem 1.5rem;
+  box-shadow: 0 4px 20px rgba(194, 194, 194, 0.5);
+  border-radius: 4px;
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: auto 1fr auto; // fallback
+  grid-template-rows: subgrid;
+
+  grid-column: span 3;
+  grid-template-columns: repeat(3, 1fr); // fallback
+  grid-template-columns: subgrid;
+
+  &__title {
+    color: #c00000;
+    font-size: 2rem;
+    grid-column: span 3;
+  }
+
+  &__text {
+    font-size: 0.938rem;
+    grid-column: span 3;
+  }
+
+  &__botones {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-columns: repeat(10, auto); //alternative
+    grid-template-columns: auto auto auto 0.75fr; //alternative
+
+    button {
+      border: 0;
+      background: transparent;
+      justify-self: left;
+
+      &:nth-of-type(1) {
+        color: green;
+      }
+
+      &:nth-of-type(2) {
+        color: rgb(128, 15, 0);
+      }
+
+      &:nth-of-type(3) {
+        color: rgb(167, 157, 27);
+      }
+    }
+
+    i {
+      vertical-align: middle;
+      font-size: 1.125rem;
+      margin-bottom: 3px;
+      display: inline-block;
+    }
+  }
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+/* -------- CLASS & ID --------- */
+
+/* -------- ANIMATIONS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+}

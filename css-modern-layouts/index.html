@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    /> -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>Modern Layout</h1>
+      <section id="s1" class="no-stretch">
+        <h3>#1.1 - Flex Layout Wrap - No Stretch</h3>
+        <p>flex: 0 1 baseWitdh</p>
+        <div class="layout">
+          <span class="box">1</span>
+          <span class="box">2</span>
+          <span class="box">3</span>
+        </div>
+      </section>
+      <section id="s1" class="stretch">
+        <h3>#1.2 - Flex Layout Wrap - Stretch</h3>
+        <p>flex: 1 1 baseWitdh</p>
+        <div class="layout">
+          <span class="box">1</span>
+          <span class="box">2</span>
+          <span class="box">3</span>
+        </div>
+      </section>
+      <section id="s2">
+        <h3>#2 Sidebar min-max</h3>
+        <p>grid-template-columns: minmax(min, max) 1fr</p>
+        <div class="layout">
+          <div class="column-1 box">
+            <p>Min: 150px / Max: 25%</p>
+          </div>
+          <div class="column-2 box">
+            This element takes the 1fr remaining space
+          </div>
+        </div>
+      </section>
+      <section id="s3">
+        <h3>#3 Pancake Stack</h3>
+        <p>grid-template-rows: auto 1fr auto</p>
+        <div class="layout">
+          <div class="header box">
+            <p>Header</p>
+          </div>
+          <div class="main box">
+            <p>Main</p>
+          </div>
+          <div class="footer box">
+            <p>Footer</p>
+          </div>
+        </div>
+      </section>
+      <section id="s4">
+        <h3>#4 Holy Grail Stack</h3>
+        <p>grid-template: auto 1fr auto / auto 1fr auto</p>
+        <div class="layout">
+          <div class="header box">
+            <p>Header</p>
+          </div>
+          <div class="left box">
+            <p>Left</p>
+          </div>
+          <div class="center box">
+            <p>Main</p>
+          </div>
+          <div class="right box">
+            <p>Right</p>
+          </div>
+          <div class="footer box">
+            <p>Footer</p>
+          </div>
+        </div>
+      </section>
+      <section id="s5">
+        <h3>#5 Clamping with CH</h3>
+        <p>clamp(min, actual, max)</p>
+        <div class="layout">
+          <div class="card">
+            <h3>Title here</h3>
+            <span></span>
+            <p>
+              Learn the latest from Dart and Flutter, including how they enable
+              you to build beautiful native apps for any platform. This session
+              covers breakthrough graphics performance, seamless integration,
+              emerging architectures and platforms, and developer experience.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

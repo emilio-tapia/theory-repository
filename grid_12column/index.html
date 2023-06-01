@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    /> -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <article class="grid1">
+      <h1>Basic MinMax Grid</h1>
+      <section class="basic-grid">
+        <div class="card">1</div>
+        <div class="card">2</div>
+        <div class="card">3</div>
+        <div class="card">4</div>
+        <div class="card">5</div>
+        <div class="card">6</div>
+        <div class="card">7</div>
+        <div class="card">8</div>
+        <div class="card">9</div>
+        <div class="card">10</div>
+        <div class="card">11</div>
+        <div class="card">12</div>
+      </section>
+    </article>
+    <article class="grid2">
+      <h1>Mosaic Grid / Span</h1>
+      <section class="photo-grid">
+        <div
+          class="card tall"
+          style="
+            --url: url('https://images.unsplash.com/photo-1622542796254-5b9c46ab0d2f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+          "
+        >
+          1
+        </div>
+        <div
+          class="card wide"
+          style="
+            --url: url('https://images.unsplash.com/photo-1496293455970-f8581aae0e3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1413&q=80');
+          "
+        >
+          2
+        </div>
+        <div
+          class="card"
+          style="
+            --url: url('https://images.unsplash.com/photo-1526394931762-90052e97b376?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+          "
+        >
+          3
+        </div>
+        <div
+          class="card"
+          style="
+            --url: url('https://images.unsplash.com/photo-1523966211575-eb4a01e7dd51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=710&q=80');
+          "
+        >
+          4
+        </div>
+        <div
+          class="card tall"
+          style="
+            --url: url('https://images.unsplash.com/photo-1416269223193-bc45028133f5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80');
+          "
+        >
+          5
+        </div>
+        <div
+          class="card"
+          style="
+            --url: url('https://images.unsplash.com/photo-1482160549825-59d1b23cb208?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80');
+          "
+        >
+          6
+        </div>
+        <div
+          class="card"
+          style="
+            --url: url('https://images.unsplash.com/photo-1655634535290-6bab0013accc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80');
+          "
+        >
+          7
+        </div>
+        <div
+          class="card"
+          style="
+            --url: url('https://images.unsplash.com/photo-1655720406770-12ea329b5b61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80');
+          "
+        >
+          8
+        </div>
+        <div
+          class="card"
+          style="
+            --url: url('https://images.unsplash.com/photo-1655635949348-953b0e3c140a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1354&q=80');
+          "
+        >
+          9
+        </div>
+        <div
+          class="card"
+          style="
+            --url: url('https://images.unsplash.com/photo-1655720410101-c5cc15b1faf0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80');
+          "
+        >
+          10
+        </div>
+        <div
+          class="card wide"
+          style="
+            --url: url('https://images.unsplash.com/photo-1655634452257-360d17c2ede7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80');
+          "
+        >
+          11
+        </div>
+        <div
+          class="card"
+          style="
+            --url: url('https://images.unsplash.com/photo-1655721529468-d0d81b2dc489?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80');
+          "
+        >
+          12
+        </div>
+      </section>
+    </article>
+    <article class="grid1">
+      <h1>Animated Grid Areas</h1>
+      <section class="area-grid">
+        <div class="card">1</div>
+        <div class="card">2</div>
+        <div class="card">3</div>
+        <div class="card">4</div>
+        <div class="card">5</div>
+        <div class="card">6</div>
+        <div class="card">7</div>
+        <div class="card">8</div>
+        <div class="card">9</div>
+        <div class="card">10</div>
+        <div class="card">11</div>
+        <div class="card">12</div>
+        <div
+          class="card"
+          style="
+            --url: url('https://images.unsplash.com/photo-1496293455970-f8581aae0e3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1413&q=80');
+          "
+        ></div>
+      </section>
+    </article>
+
+    <script src="script.js"></script>
+  </body>
+</html>

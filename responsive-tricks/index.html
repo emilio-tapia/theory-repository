@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    /> -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Responsive Padding Trick</h1>
+    <article class="one">
+      <div class="iframe-wrapper">
+        <div class="dummy-padding"></div>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/YWSv71WMkEQ"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <pre>
+      <code class="code">
+        .iframe-wrapper {
+          width: 80%; //element width
+          position: relative;
+        
+          .dummy-padding {
+            padding-top: 56.25%;
+          }
+        
+          iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+            inset: 0;
+            position: absolute;
+          }
+        }
+      </code>
+    </pre>
+    </article>
+    <article class="two">
+      <div class="img-wrapper">
+        <img
+          src="https://images.unsplash.com/photo-1676839560107-d15f4b15b766?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80"
+          alt=""
+        />
+      </div>
+
+      <pre>
+      <code class="code">
+        .img-wrapper {
+          position: relative;
+          padding-top: 56.25%; /* NO PARENT WIDTH */
+      
+          img {
+            border: none;
+          width: fit-content;
+          height: 100%;
+          inset: 0;
+          position: absolute;
+          transform: translateX(-35%);
+          }
+        }
+      </code>
+    </pre>
+    </article>
+    <article class="three">
+      <div class="img-wrapper">
+        <div class="bg-image"></div>
+      </div>
+
+      <pre>
+      <code class="code">
+        .img-wrapper {
+          max-width: 960px;
+          margin: 0 auto;
+          width: 100%;
+      
+          .bg-image {
+            width: 100%;
+            padding-top: 42%; // ASPECT RATIO
+            background: url('photo.avif');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+      </code>
+    </pre>
+    </article>
+
+    <script src="script.js"></script>
+  </body>
+</html>

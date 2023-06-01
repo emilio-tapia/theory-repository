@@ -1,0 +1,210 @@
+@use 'helpers' as h;
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include h.reset();
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: #ddd;
+  // overflow: hidden;
+
+  // @include flexDisplay(center, center, column, wrap)
+
+  // height: 100vh;
+  padding: 1rem;
+}
+
+article {
+  text-align: center;
+  border: 1px solid grey;
+  height: fit-content;
+  padding-inline: 0.5rem;
+  border-radius: 8px;
+  background: h.$primary-light;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #353535;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: #353535;
+  font-size: 3rem;
+  color: white;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: 500ms;
+  overflow: hidden;
+  box-shadow: 0 0.15rem 0.5rem rgba(2, 8, 20, 0.1),
+    0 0.075rem 0.175rem rgba(2, 8, 20, 0.08);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:hover {
+    box-shadow: 0 0.35rem 1.175rem rgba(2, 8, 20, 0.1),
+      0 0.175rem 0.5rem rgba(2, 8, 20, 0.08);
+    transform: translateY(-3px) scale(1.01);
+  }
+}
+
+.basic-grid {
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.photo-grid {
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-auto-rows: 240px; //fixed height
+
+  .card {
+    background-image: var(--url);
+    transition: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    &.tall {
+      // grid-row: 1 / 3; // explicit way INPUT / OUTPUT = FROM 1 to 3
+      grid-row: span 2 / auto; // better way INPUT / OUTPUT = FROM current location move to 2 TO auto location
+    }
+
+    &.wide {
+      grid-column: span 2 / auto;
+    }
+  }
+}
+
+.area-grid {
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+
+  grid-template-areas:
+    'a b c d'
+    'l center center e'
+    'k center center f'
+    'j i h g';
+  grid-template-columns: 240px auto auto 240px;
+  // grid-template-rows: repeat(4, 1fr);
+  grid-auto-rows: 200px; //fixed height
+
+  .card {
+    $stagger-delay: 200ms;
+    background-image: var(--url);
+    animation: cardEntrance 1s ease-out;
+    animation-fill-mode: backwards;
+    filter: grayscale(1);
+    &:nth-child(1) {
+      grid-area: a;
+      animation-delay: 1 * $stagger-delay;
+    }
+    &:nth-child(2) {
+      grid-area: b;
+      animation-delay: 2 * $stagger-delay;
+    }
+    &:nth-child(3) {
+      grid-area: c;
+      animation-delay: 3 * $stagger-delay;
+    }
+    &:nth-child(4) {
+      grid-area: d;
+      animation-delay: 4 * $stagger-delay;
+    }
+    &:nth-child(5) {
+      grid-area: e;
+      animation-delay: 5 * $stagger-delay;
+    }
+    &:nth-child(6) {
+      grid-area: f;
+      animation-delay: 6 * $stagger-delay;
+    }
+    &:nth-child(7) {
+      grid-area: g;
+      animation-delay: 7 * $stagger-delay;
+    }
+    &:nth-child(8) {
+      grid-area: h;
+      animation-delay: 8 * $stagger-delay;
+    }
+    &:nth-child(9) {
+      grid-area: i;
+      animation-delay: 9 * $stagger-delay;
+    }
+    &:nth-child(10) {
+      grid-area: j;
+      animation-delay: 10 * $stagger-delay;
+    }
+    &:nth-child(11) {
+      grid-area: k;
+      animation-delay: 11 * $stagger-delay;
+    }
+    &:nth-child(12) {
+      grid-area: l;
+      animation-delay: 12 * $stagger-delay;
+    }
+    &:nth-child(13) {
+      grid-area: center;
+      animation-delay: 13 * $stagger-delay;
+    }
+  }
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+    filter: grayscale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: grayscale(0.8);
+  }
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+/* -------- CLASS & ID --------- */
+
+/* -------- ANIMATIONS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+}

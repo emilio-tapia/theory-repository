@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap");
+/* GLOBAL CONFIG RESET */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: #222;
+  color: rgb(158, 96, 96);
+}
+
+/* -------- TYPE SELECTORS --------- */
+main {
+  padding-inline: 2rem;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+section {
+  background: rgba(221, 221, 221, 0.1);
+  outline: 0.1px solid rgb(158, 96, 96);
+  padding-inline: 0.825rem;
+  padding-block: 0.625rem;
+}
+section > p {
+  color: hsl(40, 5%, 73%);
+  text-align: right;
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  font-family: monospace;
+}
+
+/* -------- CLASS & ID --------- */
+.layout {
+  padding-block: 3rem;
+}
+
+.box {
+  background: rgba(221, 221, 221, 0.5);
+  padding-block: 3rem;
+  color: green;
+  text-align: center;
+  border-radius: 0.125rem;
+  box-shadow: 0 0.25rem 1rem 1px rgba(0, 0, 0, 0.2);
+}
+
+span {
+  outline: 1px solid green;
+}
+
+#s1 .layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#s1 .box {
+  margin: 5px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#s1.no-stretch .box {
+  flex: 0 1 150px;
+}
+#s1.stretch .box {
+  flex: 1 1 150px;
+}
+
+#s2 .layout {
+  display: grid;
+  grid-template-columns: minmax(150px, 25%) 1fr;
+  place-content: center;
+  gap: 1rem;
+}
+#s2 .column-1 {
+  background: rgb(98, 196, 196);
+}
+
+#s3 .layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 45rem;
+}
+#s3 .box {
+  padding-block: 1rem;
+}
+#s3 .header {
+  background: rgba(198, 96, 196, 0.4);
+}
+#s3 .main {
+  background: rgba(98, 196, 196, 0.4);
+}
+#s3 .footer {
+  background: rgba(8, 16, 16, 0.4);
+}
+
+#s4 .layout {
+  display: grid;
+  grid-template: auto 1fr auto/auto 1fr auto;
+  height: 45rem;
+}
+#s4 .box {
+  padding-block: 1rem;
+}
+#s4 .header {
+  background: rgba(96, 198, 169, 0.4);
+  grid-column: 1/4;
+}
+#s4 .left {
+  padding-inline: 2rem;
+  grid-column: 1/2;
+  background: rgba(40, 137, 239, 0.4);
+}
+#s4 .center {
+  grid-column: 2/3;
+  background: rgba(64, 81, 218, 0.4);
+}
+#s4 .right {
+  padding-inline: 2rem;
+  grid-column: 3/4;
+  background: rgba(190, 82, 107, 0.4);
+}
+#s4 .footer {
+  background: rgba(8, 16, 16, 0.4);
+  grid-column: span 3;
+}
+
+#s5 .layout {
+  display: grid;
+  place-items: center;
+}
+#s5 .card {
+  width: clamp(30ch, 80%, 70ch);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  outline: 1px solid rgba(81, 154, 102, 0.3882352941);
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+}
+#s5 span {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: rgba(81, 154, 102, 0.3882352941);
+  display: block;
+  border-radius: 1rem;
+}
+
+/* -------- ANIMATIONS --------- */
+/* -------- MEDIA QUERY --------- *//*# sourceMappingURL=style.css.map */

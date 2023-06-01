@@ -1,0 +1,117 @@
+@import 'helpers';
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include reset();
+  font-family: monospace;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: $primary-dark;
+  // overflow: hidden;
+
+  // @include flexDisplay(center, center, column, wrap);
+  gap: 1rem;
+
+  height: 100vh;
+  color: $white;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+/* -------- CLASS & ID --------- */
+
+h1 {
+  color: currentColor;
+  text-align: center;
+  font-size: 4rem;
+  line-height: 200%;
+}
+
+article {
+  width: 100%;
+  height: fit-content;
+  margin-block: 3rem;
+  place-items: center;
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+article.one {
+  .iframe-wrapper {
+    width: 80%; //element width
+    position: relative;
+
+    .dummy-padding {
+      padding-top: 56.25%;
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+      inset: 0;
+      position: absolute;
+    }
+  }
+}
+
+article.two {
+  .img-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* NO PARENT WIDTH */
+
+    img {
+      border: none;
+      width: fit-content;
+      height: 100%;
+      inset: 0;
+      position: absolute;
+      transform: translateX(-35%);
+    }
+  }
+}
+
+article.three {
+  .img-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+
+    .bg-image {
+      width: 100%;
+      padding-top: 42%; // ASPECT RATIO
+      background: url('photo.avif');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+pre {
+  color: currentColor;
+  border: 1px solid;
+  border-radius: 1rem;
+}
+
+code {
+  transform: translateX(-2.5rem);
+  display: block;
+}
+
+/* -------- ANIMATIONS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+}

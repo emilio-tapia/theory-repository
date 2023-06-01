@@ -1,0 +1,55 @@
+@import 'helpers';
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include reset();
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: $primary-dark;
+  // overflow: hidden;
+
+  @include flexDisplay(center, center, column, wrap);
+  gap: 1rem;
+
+  height: 100vh;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+/* -------- CLASS & ID --------- */
+
+h1 {
+  color: $white;
+}
+
+.iframe-wrapper {
+  width: 80%; //element width
+  position: relative;
+
+  .dummy-padding {
+    padding-top: 56.25%;
+  }
+
+  iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    position: absolute;
+  }
+}
+
+/* -------- ANIMATIONS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+}

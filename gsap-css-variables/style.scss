@@ -1,0 +1,107 @@
+@use 'helpers' as h;
+
+:root {
+  --color1: green;
+  --color2: rebeccapurple;
+}
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include h.reset();
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: h.$primary-dark;
+  overflow: hidden;
+
+  @include h.flexDisplay(center, center, row, wrap);
+  gap: 2rem;
+
+  height: 100vh;
+  padding: 3rem;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+/* -------- CLASS & ID --------- */
+.container {
+  max-width: 500px;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 1rem;
+}
+
+.wrapper {
+  display: grid;
+  gap: 0.5rem;
+  justify-items: start;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+
+  p {
+    color: #fff8;
+  }
+
+  button {
+    padding-block: 0.125rem;
+    padding-inline: 0.5rem;
+    text-decoration: none;
+    border: none;
+    color: white;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    margin-top: 0.75rem;
+  }
+}
+
+.box1 {
+  border: 1px solid var(--color1);
+
+  .color {
+    color: var(--color1);
+  }
+
+  button {
+    background: var(--color1);
+  }
+}
+
+.box2 {
+  border: 1px solid var(--color2);
+
+  .color {
+    color: var(--color2);
+  }
+
+  button {
+    background: var(--color2);
+  }
+}
+
+/* -------- ANIMATIONS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+}
